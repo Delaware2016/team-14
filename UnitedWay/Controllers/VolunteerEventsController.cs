@@ -32,5 +32,10 @@ namespace UnitedWay.Controllers
         {
             return View();
         }
+
+        public ActionResult Details(int id)
+        {   
+            return View(_context.VolunteerEvents.Single(v => v.Id == id));
+        }
     }
 }

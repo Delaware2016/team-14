@@ -23,7 +23,7 @@
         @foreach (VolunteerEvent volunteerEvent in @Model)
         {
             <tr>
-                <td>@Html.ActionLink(@volunteerEvent.Name, "Edit", "VolunteerEvents", new {id = volunteerEvent.Id}, null)</td>
+                <td>@Html.ActionLink(@volunteerEvent.Name, "Details", "VolunteerEvents", new {id = volunteerEvent.Id}, null)</td>
                 <td>@volunteerEvent.City</td>
                 <td>@volunteerEvent.State</td>
                 <td>
