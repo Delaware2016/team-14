@@ -246,6 +246,10 @@
     <Compile Include="Migrations\201610080856065_Addedevents.Designer.cs">
       <DependentUpon>201610080856065_Addedevents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610081054199_DbSetOnDonations.cs" />
+    <Compile Include="Migrations\201610081054199_DbSetOnDonations.Designer.cs">
+      <DependentUpon>201610081054199_DbSetOnDonations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Donation.cs" />
@@ -493,6 +497,7 @@
     <Content Include="Views\UWUsers\Index.cshtml" />
     <Content Include="Views\VolunteerEvents\Index.cshtml" />
     <Content Include="Views\Donations\Index.cshtml" />
+    <Content Include="Views\Donations\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -526,6 +531,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610080856065_Addedevents.resx">
       <DependentUpon>201610080856065_Addedevents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610081054199_DbSetOnDonations.resx">
+      <DependentUpon>201610081054199_DbSetOnDonations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

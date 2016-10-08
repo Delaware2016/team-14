@@ -10,6 +10,17 @@ namespace UnitedWay.Controllers
 {
     public class DonationsController : Controller
     {
+        ApplicationDbContext _context;
+
+        public DonationsController()
+        {
+            _context = new ApplicationDbContext();
+        }
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+        }
+
         // GET: Donations
         public ActionResult Index()
         {
@@ -22,7 +33,15 @@ namespace UnitedWay.Controllers
 
         public ActionResult Save(Donation donation)
         {
-            return View("Index", donation);
+            if(!ModelState.IsValid)
+                return View("Index", donation);
+            
+            return View("Confirmation");
+        }
+
+        public ActionResult Confirmation()
+        {
+            return View();
         }
     }
 }
