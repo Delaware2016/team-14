@@ -11,7 +11,7 @@ namespace UnitedWay.Controllers
         // GET: UWUsers
         public ActionResult Index()
         {
-            return Content("hi");
+            return View();
         }
     }
 }
