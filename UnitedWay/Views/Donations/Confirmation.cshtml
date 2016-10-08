@@ -7,3 +7,21 @@
 <h2>Confirmation</h2>
 
 <h1>Thank you so much for your donation!</h1>
+
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1052054614892979',
+      xfbml      : true,
+      version    : 'v2.8'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>

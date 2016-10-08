@@ -27,7 +27,7 @@
                 <td>@volunteerEvent.City</td>
                 <td>@volunteerEvent.State</td>
                 <td>
-                    <button data-event-id="@volunteerEvent.Id" class="btn-link js-post" onclick="">Sign me up!</button>
+                    <button data-event-id="@volunteerEvent.Id" data-event-name="@volunteerEvent.Name" class="btn-link js-post" onclick="">Sign me up!</button>
                 </td>
             </tr>
         }
@@ -46,7 +46,21 @@
         $(document).ready(function() {
 
             $("#events").DataTable();
-            //alert(@user);
-        })
+
+            $("#events").on("click", ".js-delete", function () {
+                var button = $(this);
+                bootbox.confirm("Confirm attendance to " + button.attr("data-event-name") + "?", function (result) {
+                    if (result) {
+                        $.ajax({
+                            url: "/api/volunteerevents/" + button.attr("data-customer-id"),
+                            method: "PUT",
+                            success: function () {
+                                table.row(button.parents("tr")).remove().draw();
+                            }
+                        });
+                    }
+                });
+            });
+        });
     </script>
 }
