@@ -31,11 +31,14 @@ namespace UnitedWay.Controllers
             return View(donation);
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Donation donation)
         {
             if(!ModelState.IsValid)
                 return View("Index", donation);
-            
+            _context.Donations.Add(donation);
+            _context.SaveChanges();
             return View("Confirmation");
         }
 

@@ -14,5 +14,7 @@
             @Html.TextBoxFor(m => m.Amount, new {@class="form-control", placeholder="Donation amount"})
         </div>
         @Html.ValidationMessageFor(m => m.Amount)
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 }
