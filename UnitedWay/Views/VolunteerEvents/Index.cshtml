@@ -1,4 +1,5 @@
 ﻿@using UnitedWay.Models
+@using Microsoft.AspNet.Identity
 @model List<UnitedWay.Models.VolunteerEvent>
 @{
     ViewBag.Title = "Volunteer in your area!";
@@ -35,12 +36,17 @@
     </table>
 </div>
 
+@{
+    var user = @System.Web.HttpContext.Current.User.Identity.GetUserId();
+}
+
 
 @section scripts{
     <script>
         $(document).ready(function() {
 
             $("#events").DataTable();
+            //alert(@user);
         })
     </script>
 }

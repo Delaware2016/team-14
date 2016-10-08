@@ -14,6 +14,6 @@ namespace UnitedWay.Models
         [Required]
         public int Id { get; set; }
         [Required]
-        public int CustomerId { get; set; }
+        public string UserId { get; set; }
     }
 }
