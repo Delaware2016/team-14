@@ -22,3 +22,12 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.veryblue {
+    background-color: #10167f;
+    border-color: #200ebd;
+}
+
+.center {
+    align: center;
+}
