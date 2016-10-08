@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace UnitedWay.Controllers
 {
+    [Authorize]
     public class HeroRewardsController : Controller
     {
         // GET: HeroRewards

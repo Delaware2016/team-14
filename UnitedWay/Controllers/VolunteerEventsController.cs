@@ -27,5 +27,15 @@ namespace UnitedWay.Controllers
             List<VolunteerEvent> volunteerEvents = _context.VolunteerEvents.ToList();
             return View(volunteerEvents);
         }
+
+        public ActionResult Confirmation()
+        {
+            return View();
+        }
+
+        public ActionResult Details(int id)
+        {   
+            return View(_context.VolunteerEvents.Single(v => v.Id == id));
+        }
     }
 }

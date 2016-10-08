@@ -24,11 +24,11 @@
         @foreach (VolunteerEvent volunteerEvent in @Model)
         {
             <tr>
-                <td>@Html.ActionLink(@volunteerEvent.Name, "Edit", "VolunteerEvents", new {id = volunteerEvent.Id}, null)</td>
+                <td>@Html.ActionLink(@volunteerEvent.Name, "Details", "VolunteerEvents", new {id = volunteerEvent.Id}, null)</td>
                 <td>@volunteerEvent.City</td>
                 <td>@volunteerEvent.State</td>
                 <td>
-                    <button data-event-id="@volunteerEvent.Id" data-event-name="@volunteerEvent.Name" class="btn-link js-post" onclick="">Sign me up!</button>
+                    <button data-event-id="@volunteerEvent.Id" data-event-name="@volunteerEvent.Name" class="btn-link js-put" onclick="">Sign me up!</button>
                 </td>
             </tr>
         }
@@ -48,15 +48,23 @@
 
             $("#events").DataTable();
 
-            $("#events").on("click", ".js-delete", function () {
+            $("#events").on("click", ".js-put", function () {
                 var button = $(this);
                 bootbox.confirm("Confirm attendance to " + button.attr("data-event-name") + "?", function (result) {
                     if (result) {
                         $.ajax({
-                            url: "/api/volunteerevents/" + button.attr("data-customer-id"),
+                            url: "/api/volunteerevents/" + button.attr("data-event-id"),
+                            contentType: 'application/json',
+                            data: JSON.stringify({
+                                "name": button.attr("data-event-name")
+                            }),
+                            dataType: 'json',
                             method: "PUT",
                             success: function () {
-                                table.row(button.parents("tr")).remove().draw();
+                                window.location = "/confirmation";
+                            },
+                            error: function() {
+                                alert("nope");
                             }
                         });
                     }
