@@ -259,6 +259,18 @@
     <Compile Include="Migrations\201610081424466_2NDTofinalbuild.Designer.cs">
       <DependentUpon>201610081424466_2NDTofinalbuild.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610081431439_ExternalLoginModelUpdateForName.cs" />
+    <Compile Include="Migrations\201610081431439_ExternalLoginModelUpdateForName.Designer.cs">
+      <DependentUpon>201610081431439_ExternalLoginModelUpdateForName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610081444188_NameNotRequired.cs" />
+    <Compile Include="Migrations\201610081444188_NameNotRequired.Designer.cs">
+      <DependentUpon>201610081444188_NameNotRequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610081447313_NameNotRequired2.cs" />
+    <Compile Include="Migrations\201610081447313_NameNotRequired2.Designer.cs">
+      <DependentUpon>201610081447313_NameNotRequired2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Donation.cs" />
@@ -558,6 +570,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610081424466_2NDTofinalbuild.resx">
       <DependentUpon>201610081424466_2NDTofinalbuild.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610081431439_ExternalLoginModelUpdateForName.resx">
+      <DependentUpon>201610081431439_ExternalLoginModelUpdateForName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610081444188_NameNotRequired.resx">
+      <DependentUpon>201610081444188_NameNotRequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610081447313_NameNotRequired2.resx">
+      <DependentUpon>201610081447313_NameNotRequired2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

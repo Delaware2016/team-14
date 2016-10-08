@@ -6,6 +6,24 @@ namespace UnitedWay.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
+       
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        [StringLength(2)]
+        public string State { get; set; }
+
+        public string ZipCode { get; set; }
+
+        public bool HealthInterest { get; set; }
+
+        public bool ChildrenInterest { get; set; }
+
+        public bool FundraisingInterest { get; set; }
+
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
