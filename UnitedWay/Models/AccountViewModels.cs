@@ -76,6 +76,12 @@ namespace UnitedWay.Models
 
         public string ZipCode { get; set; }
 
+        public bool HealthInterest { get; set; }
+
+        public bool ChildrenInterest { get; set; }
+
+        public bool FundraisingInterest { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

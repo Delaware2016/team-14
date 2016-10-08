@@ -155,7 +155,9 @@ namespace UnitedWay.Controllers
                 var user = new ApplicationUser {
                     UserName = model.Email, Email = model.Email, Address = model.Address,
                     Name = model.Name, City = model.City, State = model.State,
-                    ZipCode = model.ZipCode};
+                    ZipCode = model.ZipCode,
+                    ChildrenInterest = model.ChildrenInterest, HealthInterest = model.HealthInterest, FundraisingInterest = model.FundraisingInterest
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {

@@ -214,6 +214,14 @@
     <Compile Include="Migrations\201610080526400_AddedFieldsToApplicantAddress.Designer.cs">
       <DependentUpon>201610080526400_AddedFieldsToApplicantAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610080553077_NewColumnsToApplicant.cs" />
+    <Compile Include="Migrations\201610080553077_NewColumnsToApplicant.Designer.cs">
+      <DependentUpon>201610080553077_NewColumnsToApplicant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610080659325_FirstDraftOfInterests.cs" />
+    <Compile Include="Migrations\201610080659325_FirstDraftOfInterests.Designer.cs">
+      <DependentUpon>201610080659325_FirstDraftOfInterests.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -303,6 +311,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610080526400_AddedFieldsToApplicantAddress.resx">
       <DependentUpon>201610080526400_AddedFieldsToApplicantAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610080553077_NewColumnsToApplicant.resx">
+      <DependentUpon>201610080553077_NewColumnsToApplicant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610080659325_FirstDraftOfInterests.resx">
+      <DependentUpon>201610080659325_FirstDraftOfInterests.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
