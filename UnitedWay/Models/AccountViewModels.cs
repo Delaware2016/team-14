@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.Security.AccessControl;
 
 namespace UnitedWay.Models
 {
@@ -64,6 +65,17 @@ namespace UnitedWay.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        public string Name { get; set; }
+
+        public string Address { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+
+        public string ZipCode { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
