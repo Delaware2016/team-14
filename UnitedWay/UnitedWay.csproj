@@ -211,6 +211,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\Api\VolunteerEventsController.cs" />
     <Compile Include="Controllers\DonationsController.cs" />
+    <Compile Include="Controllers\HeroRewardsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UWUsersController.cs" />
@@ -498,6 +499,7 @@
     <Content Include="Views\VolunteerEvents\Index.cshtml" />
     <Content Include="Views\Donations\Index.cshtml" />
     <Content Include="Views\Donations\Confirmation.cshtml" />
+    <Content Include="Views\HeroRewards\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
