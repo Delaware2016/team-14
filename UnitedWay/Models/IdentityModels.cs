@@ -38,7 +38,7 @@ namespace UnitedWay.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
-
+        public DbSet<VolunteerEvent> VolunteerEvents { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
