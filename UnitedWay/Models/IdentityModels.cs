@@ -17,9 +17,16 @@ namespace UnitedWay.Models
 
         public string City { get; set; }
 
+        [StringLength(2)]
         public string State { get; set; }
 
         public string ZipCode { get; set; }
+
+        public bool HealthInterest { get; set; }
+
+        public bool ChildrenInterest { get; set; }
+
+        public bool FundraisingInterest { get; set; }
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager)
         {
             // Note the authenticationType must match the one defined in CookieAuthenticationOptions.AuthenticationType
@@ -31,6 +38,9 @@ namespace UnitedWay.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<VolunteerEvent> VolunteerEvents { get; set; }
+        public DbSet<Donation> Donations { get; set; }
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

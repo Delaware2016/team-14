@@ -22,18 +22,21 @@
         @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email)
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.Email)
         </div>
     </div>
     <div class="form-group">
         @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
         <div class="col-md-10">
             @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.ConfirmPassword)
         </div>
     </div>
     <div class="form-group">
@@ -58,10 +61,39 @@
         </div>
     </div>
     <div class="form-group">
-        @Html.LabelFor(m => m.ZipCode, new { @class = "col-md-2 control-label" })
+        @Html.LabelFor(m => m.ZipCode, new {@class = "col-md-2 control-label"})
         <div class="col-md-10">
-            @Html.TextBoxFor(m => m.ZipCode, new { @class = "form-control" })
+            @Html.TextBoxFor(m => m.ZipCode, new {@class = "form-control"})
             @Html.ValidationMessageFor(m => m.ZipCode)
+        </div>
+    </div>
+
+    //PREFERENCES GROUP BELOW
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label for="HealthInterest">
+                    @Html.CheckBoxFor(m => m.HealthInterest) Health
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label for="ChildrenInterest">
+                    @Html.CheckBoxFor(m => m.ChildrenInterest) Children
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label for="FundraisingInterest">
+                    @Html.CheckBoxFor(m => m.FundraisingInterest) Fundraising
+                </label>
+            </div>
         </div>
     </div>
     <div class="form-group">

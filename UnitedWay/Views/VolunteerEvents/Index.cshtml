@@ -1,0 +1,52 @@
+﻿@using UnitedWay.Models
+@using Microsoft.AspNet.Identity
+@model List<UnitedWay.Models.VolunteerEvent>
+@{
+    ViewBag.Title = "Volunteer in your area!";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<div class="container">
+    <table id="events" class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Event</th>
+            <td>City</td>
+            <th>State</th>
+            <th>Join</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        @foreach (VolunteerEvent volunteerEvent in @Model)
+        {
+            <tr>
+                <td>@Html.ActionLink(@volunteerEvent.Name, "Edit", "VolunteerEvents", new {id = volunteerEvent.Id}, null)</td>
+                <td>@volunteerEvent.City</td>
+                <td>@volunteerEvent.State</td>
+                <td>
+                    <button data-event-id="@volunteerEvent.Id" class="btn-link js-post" onclick="">Sign me up!</button>
+                </td>
+            </tr>
+        }
+
+        </tbody>
+    </table>
+</div>
+
+@{
+    var user = @System.Web.HttpContext.Current.User.Identity.GetUserId();
+}
+
+
+@section scripts{
+    <script>
+        $(document).ready(function() {
+
+            $("#events").DataTable();
+            //alert(@user);
+        })
+    </script>
+}
