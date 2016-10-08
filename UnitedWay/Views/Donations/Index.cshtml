@@ -1,0 +1,18 @@
+﻿@model UnitedWay.Models.Donation
+@{
+    ViewBag.Title = "Make a Donation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm("Save", "Donations"))
+{
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            @Html.TextBoxFor(m => m.Amount, new {@class="form-control", placeholder="Donation amount"})
+        </div>
+        @Html.ValidationMessageFor(m => m.Amount)
+    </div>
+}
