@@ -255,6 +255,10 @@
     <Compile Include="Migrations\201610081408085_AddedDescriptionToEvents.Designer.cs">
       <DependentUpon>201610081408085_AddedDescriptionToEvents.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610081424466_2NDTofinalbuild.cs" />
+    <Compile Include="Migrations\201610081424466_2NDTofinalbuild.Designer.cs">
+      <DependentUpon>201610081424466_2NDTofinalbuild.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Donation.cs" />
@@ -551,6 +555,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610081408085_AddedDescriptionToEvents.resx">
       <DependentUpon>201610081408085_AddedDescriptionToEvents.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610081424466_2NDTofinalbuild.resx">
+      <DependentUpon>201610081424466_2NDTofinalbuild.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

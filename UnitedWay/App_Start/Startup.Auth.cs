@@ -54,9 +54,9 @@ namespace UnitedWay
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "1052054614892979",
+               appSecret: "0b3269eec0e70fecc5a3de1d61dd7be5");
 
             //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             //{
