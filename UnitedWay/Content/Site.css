@@ -23,6 +23,15 @@ textarea {
     max-width: 280px;
 }
 
+.input-validation-error {
+    
+    border: 2px solid red;
+    border-radius: 2px;
+    
+}
+
+.field-validation-error {
+    color: red;
 .veryblue {
     background-color: #10167f;
     border-color: #200ebd;
