@@ -60,9 +60,10 @@ namespace UnitedWay.Controllers.Api
 
             //If you got this far, everything was fine!
             volunteerEventInDb.Name = volunteerEvent.Name;
-            volunteerEventInDb.City = volunteerEvent.City;
-            volunteerEventInDb.State = volunteerEvent.State;
-            return Ok();
+           // volunteerEventInDb.City = volunteerEvent.City;
+           // volunteerEventInDb.State = volunteerEvent.State;
+            _context.SaveChanges();
+            return Ok(volunteerEventInDb);
         }
     }
 }
