@@ -506,6 +506,7 @@
     <Content Include="Views\Donations\Index.cshtml" />
     <Content Include="Views\Donations\Confirmation.cshtml" />
     <Content Include="Views\HeroRewards\Index.cshtml" />
+    <Content Include="Views\VolunteerEvents\Confirmation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
